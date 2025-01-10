@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Photo } from "../types/types";
 
 interface ImageProps {
@@ -7,7 +8,9 @@ interface ImageProps {
 const Image: React.FC<ImageProps> = ({ item }) => {
     return (
         <div className="mb-4 break-inside-avoid">
-            <img className="w-full object-cver rounded-lg" src={item.src.medium} alt={item.alt} />
+            <Link to={`/image/${item.id}`}>
+                <img className="w-full object-cver rounded-lg" src={item.src.medium} alt={item.alt} />
+            </Link>
         </div>
     );
 };
