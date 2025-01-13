@@ -1,17 +1,18 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
-import DetailedView from './components/DetailedView.tsx'
+
+const LazyHome = lazy(() => import('./components/Home'));
+const LazyDetailedView = lazy(() => import('./components/DetailedView'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index path="/" element={<App />} />
+        <Route index path="/" element={<LazyHome />} />
         <Route path="image">
-          <Route path=":id" element={<DetailedView />} />
+          <Route path=":id" element={<LazyDetailedView />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,9 +1,5 @@
 import { Link } from "react-router";
-import { Photo } from "../types/types";
-
-interface ImageProps {
-    item: Photo;
-}
+import { ImageProps } from "../../../types/types";
 
 const Image: React.FC<ImageProps> = ({ item }) => {
     return (
