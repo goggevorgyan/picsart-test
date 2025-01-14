@@ -1,3 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.detailed-info {
+    justify-content: center;
+    align-items: center;
+}
+.detailed-info > div {
+    padding: 20px;
+    text-align: center;
+}
+.detailed-info > div img {
+    max-width: 100%;
+}
+.nav-bar {
+    display: inline-flex;
+}
+.back-btn {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+#grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#grid img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.message-box {
+    height: 2rem;
+    color: white;
+    background-color: #344337;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #344337;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.header input {
+    width: 300px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+@media (min-width: 640px) {
+    #grid {
+        -moz-columns: 2;
+        columns: 2;
+    }
+    .detailed-info {
+        display: block;
+    }
+    .detailed-info>div{
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    #grid {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        -moz-columns: 4;
+        columns: 4;
+    }
+    .detailed-info {
+        display: inline-flex;
+    }
+    .detailed-info>div{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #grid {
+        -moz-columns: 6;
+        columns: 6;
+    }
+}

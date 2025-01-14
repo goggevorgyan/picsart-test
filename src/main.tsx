@@ -1,7 +1,6 @@
 import { StrictMode, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 
 const LazyHome = lazy(() => import('./components/Home'));
 const LazyDetailedView = lazy(() => import('./components/DetailedView'));

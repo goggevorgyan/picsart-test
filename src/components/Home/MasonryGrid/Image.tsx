@@ -3,9 +3,9 @@ import { ImageProps } from "../../../types/types";
 
 const Image: React.FC<ImageProps> = ({ item }) => {
     return (
-        <div className="mb-4 break-inside-avoid">
+        <div>
             <Link to={`/image/${item.id}`}>
-                <img className="w-full object-cver rounded-lg" width="auto" height="auto" src={item.src.medium} alt={item.alt} />
+                <img width="auto" height="auto" src={item.src.medium} alt={item.alt} />
             </Link>
         </div>
     );
